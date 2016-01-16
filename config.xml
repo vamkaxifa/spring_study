@@ -2,8 +2,8 @@
 <!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN"
 "http://www.springframework.org/dtd/spring-beans.dtd">
 <beans>
-<!-- 定义一个bean -->
-<bean id="HelloWorld" class="com.gc.action.ChHello">
+<!-- 定义一个bean  spring 默认singleton="true"-->
+<bean id="HelloWorld" class="com.gc.action.ChHello" singleton="true" >
 <!-- 将其变量msg通过依赖注入 -->
 <property name ="msg">
 <value>gf</value>
