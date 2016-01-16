@@ -12,7 +12,9 @@ public class TestHelloWorld {
 //	  hw.setMsg("Hello World !");
 //	  System.out.println(hw.getMsg());
 	  ApplicationContext actx = new FileSystemXmlApplicationContext("config.xml");
-	  Hello hello = (Hello) actx.getBean("HelloWorld");
-	  System.out.println(hello.doSalutation());
+	 // Hello hello = (Hello) actx.getBean("HelloWorld");
+	  HelloWorld hw = (HelloWorld) actx.getBean("HelloWorld");
+	 // System.out.println(hello.doSalutation());
+	  System.out.println(hw.getDate()+"=="+hw.getMsg());
 }
 }

@@ -2,20 +2,28 @@
 <!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN"
 "http://www.springframework.org/dtd/spring-beans.dtd">
 <beans>
-<!-- 定义一个bean  spring 默认singleton="true"-->
-<bean id="HelloWorld" class="com.gc.action.ChHello" singleton="true" >
-<!-- 将其变量msg通过依赖注入 -->
-<property name ="msg">
-<value>gf</value>
-</property>
-</bean>
+	<!-- 定义一个bean spring 默认singleton="true" -->
+	<bean id="HelloWorld" class="com.gc.action.ChHello" singleton="true">
+<!-- 	<bean id="HelloWorld" class="com.gc.action.ChHello" singleton="true"> -->
+		<!-- 将其变量msg通过依赖注入 -->
+		<property name="msg">
+			<value>hello !!!</value>
+		</property>
+		
+		<!-- 变量date通过依赖注入来完成 -->
+		<property name="date">
+		<ref bean="date"/>
+		</property>
+		
+	</bean>
+	<bean id="date" class="java.util.Date" />
 
-<!-- 定义一个bean,通过构造函数注入 -->
-<bean id="HelloWorld1" class="com.constructorinjection.action.HelloWorld">
-<!-- 通过构造函数进行注入 -->
-<constructor-arg index="0">
-<value>Hello lcy</value>
-</constructor-arg>
-</bean>
+	<!-- 定义一个bean,通过构造函数注入 -->
+	<bean id="HelloWorld1" class="com.constructorinjection.action.HelloWorld">
+		<!-- 通过构造函数进行注入 -->
+		<constructor-arg index="0">
+			<value>Hello lcy</value>
+		</constructor-arg>
+	</bean>
 
 </beans>
