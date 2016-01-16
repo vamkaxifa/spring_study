@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding ="UTF-8" ?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN"
+"http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+<!-- 定义一个bean -->
+<bean id="HelloWorld" class="com.gc.action.ChHello">
+<!-- 将其变量msg通过依赖注入 -->
+<property name ="msg">
+<value>gf</value>
+</property>
+</bean>
+
+<!-- 定义一个bean,通过构造函数注入 -->
+<bean id="HelloWorld1" class="com.constructorinjection.action.HelloWorld">
+<!-- 通过构造函数进行注入 -->
+<constructor-arg index="0">
+<value>Hello lcy</value>
+</constructor-arg>
+</bean>
+
+</beans>
