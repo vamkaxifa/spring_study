@@ -7,16 +7,19 @@
 <!-- 	<bean id="HelloWorld" class="com.gc.action.ChHello" singleton="true"> -->
 		<!-- 将其变量msg通过依赖注入 -->
 		<property name="msg">
-			<value>hello !!!</value>
+		<null/>
+<!-- 			<value>hello !!!</value> -->
+<!-- 			<value>null</value> -->
 		</property>
 		
 		<!-- 变量date通过依赖注入来完成 -->
 		<property name="date">
-		<ref bean="date"/>
+<!-- 		<ref bean="date"/> -->
+		<bean id="date" class="java.util.Date"/>
 		</property>
 		
 	</bean>
-	<bean id="date" class="java.util.Date" />
+<!-- 	<bean id="date" class="java.util.Date" /> -->
 
 	<!-- 定义一个bean,通过构造函数注入 -->
 	<bean id="HelloWorld1" class="com.constructorinjection.action.HelloWorld">
