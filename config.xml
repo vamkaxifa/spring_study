@@ -3,7 +3,7 @@
 "http://www.springframework.org/dtd/spring-beans.dtd">
 <beans>
 	<!-- 定义一个bean spring 默认singleton="true" -->
-	<bean id="HelloWorld" class="com.gc.action.ChHello" singleton="true">
+	<bean id="HelloWorld" class="com.gc.action.HelloWorld">
 <!-- 	<bean id="HelloWorld" class="com.gc.action.ChHello" singleton="true"> -->
 		<!-- 将其变量msg通过依赖注入 -->
 		<property name="msg">
