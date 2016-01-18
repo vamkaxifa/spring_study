@@ -66,5 +66,15 @@
 			<value>Hello lcy</value>
 		</constructor-arg>
 	</bean>
+	
+	<!-- 负责国际话支持 -->
+	<bean id="messageSource" 
+	class="org.springframework.context.support.ResourceBundleMessageSource">
+	<property name="basename">
+	<!-- 国际化支持的定义在文件名为messages的文件中 -->
+	<value>messages</value>
+	</property>
+	</bean>
+	
 
 </beans>

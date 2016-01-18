@@ -9,6 +9,7 @@ import org.springframework.beans.BeanWrapperImpl;
 import org.springframework.beans.factory.xml.XmlBeanFactory;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.FileSystemXmlApplicationContext;
+import org.springframework.core.io.ClassPathResource;
 import org.springframework.core.io.Resource;
 
 import com.gc.action.HelloWorld;
@@ -39,6 +40,9 @@ public class TestHelloWorld {
 	  XmlBeanFactory factory = new XmlBeanFactory((Resource) is);
 	  HelloWorld helloWorld1 = (HelloWorld) factory.getBean("HelloWorld");
 	  System.out.println(helloWorld1.getMsg());
+	  
+	  ClassPathResource res = new ClassPathResource("config.xml");
+	  XmlBeanFactory factory1 = new XmlBeanFactory(res);
 	  
 	  //3.使用ApplicationContext,貌似用得最多
 	  ApplicationContext actx1 = new FileSystemXmlApplicationContext("config.xml");
