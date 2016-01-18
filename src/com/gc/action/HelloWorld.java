@@ -3,6 +3,7 @@ package com.gc.action;
 import java.util.Date;
 import java.util.List;
 import java.util.Map;
+import java.util.Properties;
 import java.util.Set;
 
 public class HelloWorld {
@@ -12,6 +13,15 @@ public class HelloWorld {
 	private List alist = null;
 	private Set aset = null;
 	private Map amap = null;
+	private Properties proper = null;
+
+	public Properties getProper() {
+		return proper;
+	}
+
+	public void setProper(Properties proper) {
+		this.proper = proper;
+	}
 
 	public List getAlist() {
 		return alist;

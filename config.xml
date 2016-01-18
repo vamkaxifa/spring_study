@@ -48,6 +48,14 @@
 		</map>
 		</property>
 		
+		<!--Properties 的依赖注入  -->
+		<property name="proper">
+		<props>
+		<prop key="gf">gff</prop>
+		<prop key="gd">gdd</prop>
+		</props>
+		</property>
+		
 	</bean>
 <!-- 	<bean id="date" class="java.util.Date" /> -->
 
