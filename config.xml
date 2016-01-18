@@ -18,6 +18,36 @@
 		<bean id="date" class="java.util.Date"/>
 		</property>
 		
+		<!--list 的依赖注入  -->
+		<property name="alist">
+		<list>
+		<value>gf</value>
+		<value>gd</value>
+		<value>hello list</value>
+		</list>
+		</property>
+		
+		<!--set 的依赖注入  -->
+		<property name="aset">
+		<set>
+		<value>gf</value>
+		<value>gd</value>
+		<value>hello set</value>
+		</set>
+		</property>
+		
+		<!--map 的依赖注入  -->
+		<property name="amap">
+		<map>
+		<entry key="gf">
+		<value>hello map 1</value>
+		</entry>
+		<entry key="gd">
+		<value>hello map 2</value>
+		</entry>
+		</map>
+		</property>
+		
 	</bean>
 <!-- 	<bean id="date" class="java.util.Date" /> -->
 
