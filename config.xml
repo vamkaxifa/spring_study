@@ -76,5 +76,7 @@
 	</property>
 	</bean>
 	
+	<bean id = "log" class="com.log.action.Log"/>
+	<bean id = "listener" class = "com.log.action.LogListener"/>
 
 </beans>
